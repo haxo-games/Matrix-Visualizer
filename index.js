@@ -10,6 +10,8 @@ init();
 animate();
 
 function init() {
+  document.getElementById("copyrightYear").innerHTML = new Date().getFullYear();
+
   scene = new THREE.Scene();
   camera = new THREE.PerspectiveCamera(
     75,
@@ -102,8 +104,10 @@ function init() {
     }
   });
 
-  document.addEventListener("click", () => {
-    document.body.requestPointerLock();
+  document.addEventListener("click", (event) => {
+    if (event.target instanceof HTMLCanvasElement) {
+      document.body.requestPointerLock();
+    }
   });
 
   document.addEventListener("mousemove", (e) => {
@@ -142,7 +146,7 @@ function formatMatrix(matrix, isRowMajor) {
       str += "\n";
     }
   }
-  
+
   return str;
 }
 
@@ -150,7 +154,7 @@ function updateMatrixDisplay() {
   const viewMatrix = camera.matrixWorldInverse.clone();
   const projectionMatrix = camera.projectionMatrix.clone();
   const viewProjectionMatrix = projectionMatrix.clone().multiply(viewMatrix);
-  
+
   const isRowMajor = document.getElementById("matrix-format").value === "row";
   const formatLabel = isRowMajor ? "Row-Major" : "Column-Major";
 

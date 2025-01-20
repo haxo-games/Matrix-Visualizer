@@ -30,7 +30,6 @@ footer {
   left: 10px;
   color: white;
   padding: 10px;
-  pointer-events: none;
   border-radius: 0.5rem;
   box-shadow: inset 0px 0px 26px 0px hsla(0, 0%, 100%, 0.03);
   border: 1px solid #252525;
@@ -82,9 +81,4 @@ footer {
 
 .matrix {
   margin-bottom: 20px;
-}
-
-.matrix-label {
-  color: #ffff00;
-  margin-bottom: 5px;
 }
