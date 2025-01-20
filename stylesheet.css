@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+footer {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#info {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  pointer-events: none;
+}
+
+#matrices {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  color: white;
+  padding: 10px;
+  pointer-events: none;
+  border-radius: 0.5rem;
+  box-shadow: inset 0px 0px 26px 0px hsla(0, 0%, 100%, 0.03);
+  border: 1px solid #252525;
+  background-color: rgba(17, 17, 17, 0.5);
+}
+
+#matrices h3 {
+  margin: 0px;
+}
+
+#settings {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+  display: flex;
+  gap: 10px;
+}
+
+#settings select {
+  padding: 5px;
+  background-color: #252525;
+  color: white;
+  border-radius: 0.3rem;
+  border: 1px solid #252525;
+}
+
+#controls-info {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  padding: 10px;
+  pointer-events: none;
+  border-radius: 0.5rem;
+  box-shadow: inset 0px 0px 26px 0px hsla(0, 0%, 100%, 0.03);
+  border: 1px solid #252525;
+  background-color: rgba(17, 17, 17, 0.5);
+}
+
+#controls-info ul {
+  padding-left: 15px;
+  margin: 0.3rem 0px 0px 0px;
+}
+
+#controls-info li {
+  font-family: monospace;
+}
+
+.matrix {
+  margin-bottom: 20px;
+}
+
+.matrix-label {
+  color: #ffff00;
+  margin-bottom: 5px;
+}
