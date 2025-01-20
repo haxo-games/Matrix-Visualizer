@@ -37,9 +37,8 @@
         Inc.</small
       >
       <script>
-        const timeEl = document.querySelector("#copyrightYear");
-        const currentYear = new Date().getFullYear();
-        timeEl.textContent = currentYear;
+        document.querySelector("#copyrightYear").textContent =
+          new Date().getFullYear();
       </script>
     </footer>
   </body>

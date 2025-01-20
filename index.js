@@ -142,16 +142,16 @@ function formatMatrix(matrix, isRowMajor) {
       str += "\n";
     }
   }
+  
   return str;
 }
 
 function updateMatrixDisplay() {
-  const isRowMajor = document.getElementById("matrix-format").value === "row";
-
   const viewMatrix = camera.matrixWorldInverse.clone();
   const projectionMatrix = camera.projectionMatrix.clone();
   const viewProjectionMatrix = projectionMatrix.clone().multiply(viewMatrix);
-
+  
+  const isRowMajor = document.getElementById("matrix-format").value === "row";
   const formatLabel = isRowMajor ? "Row-Major" : "Column-Major";
 
   matrixDisplay.innerHTML = `
