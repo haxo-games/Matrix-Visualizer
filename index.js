@@ -34,11 +34,17 @@ function init() {
   platform.position.y = -2;
   scene.add(platform);
 
+  const textureLoader = new THREE.TextureLoader();
+  const texture = textureLoader.load("iron.png");
   const geometry = new THREE.BoxGeometry();
-  const material = new THREE.MeshPhongMaterial({ color: 0x00ff00 });
+  const material = new THREE.MeshPhongMaterial({ 
+    map: texture,
+    color: 0xffffff,
+  });
   cube = new THREE.Mesh(geometry, material);
   cube.castShadow = true;
   cube.position.y = 0;
+
   scene.add(cube);
 
   const ambientLight = new THREE.AmbientLight(0x404040);
